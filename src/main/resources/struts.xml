@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.devMode" value="" />
+	<package name="default" namespace="/"
+		extends="struts-default,json-default,action-default">
+		
+		
+		<action name="register" class="com.struts2.op.action.AddPerson" method="addPersonDetails">
+		<result name="success">index.jsp</result>
+		<result name="error">index.jsp</result>
+		</action>
+		
+		<!-- <action name="delete" class="com.struts2.op.action.AddPerson" method="deletePerson">
+		<result name="success">index.jsp</result>
+		<result name="input">index.jsp</result>
+		<result name="error">index.jsp</result>
+		</action> -->
+		
+		<action name="update" class="com.struts2.op.action.AddPerson" method="updatePersonDetail">
+		<result name="success">index.jsp</result>
+		<result name="input">index.jsp</result>
+		<result name="error">index.jsp</result>
+		</action>
+		
+		<action name="personDetailsData" method="getPersonDetailsList"
+			class="com.struts2.op.action.JqGridDisplayAction">
+			<result name="success" type="json"></result>
+		</action>	
+		
+	
+	
+		
+		</package>
+		</struts>
+		
+		
+	
